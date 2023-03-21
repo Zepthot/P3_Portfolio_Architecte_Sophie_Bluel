@@ -1,0 +1,42 @@
+.instagram-icon {
+    display: flex;
+}
+
+.instagram-icon img {
+    width: 20px;
+}
+
+.instagram-icon a {
+    height: 20px;
+}
+
+.filters {
+	display: flex;
+	flex-direction: row;
+	margin: 21px 0px 51px 0px;
+	justify-content: center;
+	gap: 10px;
+}
+
+.filters-all, 
+.filters-objects, 
+.filters-flats, 
+.filters-hotels {
+	padding: 9px;
+	min-width: 100px;
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	color: #1D6154;
+	background-color: white;
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+}
+
+.filters-all:hover, 
+.filters-objects:hover, 
+.filters-flats:hover, 
+.filters-hotels:hover  {
+	background-color: #1D6154;
+	cursor: pointer;
+}
