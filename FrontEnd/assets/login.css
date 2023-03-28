@@ -47,6 +47,18 @@ body {
     padding: 0px 10px;
 }
 
+.wrong-div {
+    text-align: center;
+    height: min-content;
+}
+
+.wrong-style {
+    display: none;
+    color: red;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
 .button-login {
     height: 50px;
     font-size: 1.2em;
