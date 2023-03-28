@@ -7,12 +7,22 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" 
+	integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="stylesheet" href="./assets/index.css">
 	<script type="module" src="works.js"></script>
+	<script type="module" src="edit.js"></script>
 </head>
 <body>
+	<!-- <div class="on-header">
+		<div>
+			<p class="edit-mode"><i class="fa-solid fa-pen-to-square"></i>Mode édition</p>
+			<button id="validButton" class="valid-button" type="submit"></button>
+		</div>
+	</div> -->
 <header>
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
@@ -32,17 +42,28 @@
 		<article>
 			<h2>Designer d'espace</h2>
 			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l'esprit des lieux, et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="my-projects-title">
+			<h2>Mes Projets</h2>
+			<!-- <div>
+				<button id="projectButton" class="project-button" type="button" value="Modifier">Modifier</button>
+				<div id="editModal" class="edit-modal">
+					<div class="content-modal">
+						<span class="close">&times;</span>
+						<h3>Galerie photo</h3>
+					</div>
+				</div>
+			</div> -->
+		</div>
 		<ul class="filters">
-			<li><button class="filters-all">Tous</button></li>
-			<li><button class="filters-objects">Objets</button></li>
-			<li><button class="filters-flats">Appartements</button></li>
-			<li><button class="filters-hotels">Hôtels & restaurants</button></li>
+			<li><button class="filters-all" id="0">Tous</button></li>
+			<li><button class="filters-objects" id="1">Objets</button></li>
+			<li><button class="filters-flats" id="2">Appartements</button></li>
+			<li><button class="filters-hotels" id="3">Hôtels & restaurants</button></li>
 		</ul>
 		<div class="gallery">
 		</div>

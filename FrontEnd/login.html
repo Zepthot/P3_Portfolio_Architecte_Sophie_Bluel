@@ -10,27 +10,30 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="stylesheet" href="./assets/login.css">
+	<script type="module" src="login.js"></script>
 </head>
 <body>
 	<header>
-		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 		<nav>
 			<ul>
 				<li>projets</li>
 				<li>contact</li>
 				<li class="active"><a href="login.html">login</a></li>
-				<li class="instagram-icon"><a href="https://www.instagram.com/"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+				<li class="instagram-icon">
+					<a href="https://www.instagram.com/"><img src="./assets/icons/instagram.png" alt="Instagram"></a>
+				</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<section class="login">
 			<h2>Log In</h2>
-				<form method="get" action="#">
+				<form method="post" action="#" class="form-test">
 					<label class="form-label" for="email">E-mail</label>
-					<input class="field" type="text" name="email" id="email">
+					<input class="field" type="text" name="email" id="email" required>
 					<label class="form-label" for="password">Mot de passe</label>
-					<input class="field" type="password" name="password" id="password">
+					<input class="field" type="password" name="password" id="password" required>
 					<input type="submit" value="Se connecter" class="button-login">
 					<a href="#" class="forgotten-password">Mot de passe oublié</a>
 				</form>
