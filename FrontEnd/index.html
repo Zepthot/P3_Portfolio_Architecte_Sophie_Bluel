@@ -17,12 +17,12 @@
 	<script type="module" src="edit.js"></script>
 </head>
 <body>
-	<!-- <div class="on-header">
-		<div>
-			<p class="edit-mode"><i class="fa-solid fa-pen-to-square"></i>Mode édition</p>
-			<button id="validButton" class="valid-button" type="submit"></button>
+	<div id="onHeader" class="on-header-visible">
+		<div class="on-header-style">
+			<p class="edit-mode"><i class="fa-regular fa-pen-to-square"></i>Mode édition</p>
+			<button id="validButton" class="valid-button" type="submit" value="Publish">Publier les changements</button>
 		</div>
-	</div> -->
+	</div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
@@ -38,6 +38,7 @@
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
+			<button id="introButton" class="edit-button" type="button" value="Modifier"><i class="fa-regular fa-pen-to-square"></i>Modifier</button>
 		</figure>
 		<article>
 			<h2>Designer d'espace</h2>
@@ -49,15 +50,15 @@
 	<section id="portfolio">
 		<div class="my-projects-title">
 			<h2>Mes Projets</h2>
-			<!-- <div>
-				<button id="projectButton" class="project-button" type="button" value="Modifier">Modifier</button>
+			<div>
+				<button id="projectButton" class="edit-button" type="button" value="Modifier"><i class="fa-regular fa-pen-to-square"></i>Modifier</button>
 				<div id="editModal" class="edit-modal">
 					<div class="content-modal">
 						<span class="close">&times;</span>
 						<h3>Galerie photo</h3>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		<ul class="filters">
 			<li><button class="filters-all" id="0">Tous</button></li>
