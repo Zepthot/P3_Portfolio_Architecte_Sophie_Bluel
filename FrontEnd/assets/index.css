@@ -73,9 +73,14 @@
 	font-size: 14px;
 }
 
-#introduction button {
+#introduction figure button {
 	display: none;
 	margin: 15px 0px 0px 50px;
+}
+
+#introduction article button {
+	display: none;
+	margin-bottom: 15px;
 }
 
 .my-projects-title {
@@ -85,7 +90,7 @@
 	gap: 31px;
 }
 
-.my-projects-title div {
+.div-button-modal{
 	padding-top: 10px;
 }
 
@@ -107,7 +112,8 @@
 	background-color: white;
 }
 
-.edit-modal {
+/*********** MODAL ***********/
+.modal {
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -115,29 +121,140 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.content-modal {
-	background-color: #fefefe;
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
+.modal-content {
+	background-color: white;
+	margin: 6% auto;
+	max-width: 630px;
+	padding: 30px;
+	border-radius: 10px;
+	width: 50%;
 }
 
-.close-button {
-	color: #aaa;
+.modal-close {
 	float: right;
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: bold;
 }
   
-.close:hover,
-.close:focus {
-	color: black;
+.modal-close:hover,
+.modal-close:focus {
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-title {
+	font-family: "Work Sans";
+	font-size: 26px;
+	font-weight: 400;
+	padding: 30px 0px 16px 0px;
+}
+
+.modal-gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	column-gap: 9px;
+	row-gap: 9px;
+	justify-content: center;
+	margin: 46px 105px;
+}
+
+.modal-gallery img {
+	width: 100%;
+	position: relative;
+}
+
+.modal-edit {
+	border: none;
+	background-color: white;
+	float: inline-start;
+}
+
+.modal-edit:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+.modal-figure {
+	position: relative;
+}
+
+.modal-gallery svg {
+	color: white;
+}
+
+.modal-trash {
+	cursor: pointer;
+	background-color: black;
+	border: none;
+	border-radius: 2px;
+	padding: 4px;
+	position: absolute;
+	z-index: 1;
+	top: 6px;
+	right: 6px;
+}
+
+.modal-arrows {
+	display: none;
+}
+
+.modal-figure:hover .modal-arrows {
+	display: block;
+	cursor: pointer;
+	background-color: black;
+	border: none;
+	border-radius: 2px;
+	padding: 4px;
+	position: absolute;
+	z-index: 1;
+	top: 6px;
+	right: 29px;
+}
+
+.modal-line {
+	color: #b3b3b3;
+	width: 420px;
+	margin: 47px auto 15px auto;
+	text-align: center;
+}
+
+.modal-add {
+	margin: 23px;
+	background-color: #1D6154;
+	color: white;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 10px;
+	min-width: 237px;
+	border: none;
+	border-radius: 60px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modal-add:hover {
+	background-color: #0E2F28;
+	color: white;
+	cursor: pointer;
+}
+
+.modal-delete {
+	color: #d65353;
+	font-family: "Syne";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 18px;
+	border: none;
+	background-color: white;
+}
+
+.modal-delete:hover {
+	background-color: white;
 	cursor: pointer;
 }

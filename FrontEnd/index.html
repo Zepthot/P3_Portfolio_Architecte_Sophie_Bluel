@@ -38,9 +38,10 @@
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
-			<button id="introButton" class="edit-button" type="button" value="Modifier"><i class="fa-regular fa-pen-to-square"></i>Modifier</button>
+			<button id="pictureButton" class="edit-button" type="button" value="Modifier"><i class="fa-regular fa-pen-to-square"></i>Modifier</button>
 		</figure>
 		<article>
+			<button id="introButton" class="edit-button" type="button" value="Modifier"><i class="fa-regular fa-pen-to-square"></i>Modifier</button>
 			<h2>Designer d'espace</h2>
 			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
 			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l'esprit des lieux, et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
@@ -50,12 +51,84 @@
 	<section id="portfolio">
 		<div class="my-projects-title">
 			<h2>Mes Projets</h2>
-			<div>
+			<div class="div-button-modal">
 				<button id="projectButton" class="edit-button" type="button" value="Modifier"><i class="fa-regular fa-pen-to-square"></i>Modifier</button>
-				<div id="editModal" class="edit-modal">
-					<div class="content-modal">
-						<span class="close">&times;</span>
-						<h3>Galerie photo</h3>
+				<div id="modal" class="modal">
+					<div class="modal-content">
+						<span class="modal-close">&times;</span>
+						<h3 class="modal-title">Galerie photo</h3>
+						<div class="modal-gallery">
+							<figure class="modal-figure">
+								<img src="./assets/images/abajour-tahina.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/appartement-paris-v.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/restaurant-sushisen-londres.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/la-balisiere.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/structures-thermopolis.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/appartement-paris-x.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/le-coteau-cassis.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/villa-ferneze.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/appartement-paris-xviii.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/bar-lullaby-paris.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+							<figure class="modal-figure">
+								<img src="./assets/images/hotel-first-arte-new-delhi.png">
+								<button class="modal-trash"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="modal-arrows"><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+								<button id="modalEdit"	class="modal-edit" type="button" value="Éditer">Éditer</button>
+							</figure>
+						</div>
+						<hr class="modal-line">
+						<button class="modal-add">Ajouter une photo</button>
+						<br>
+						<button class="modal-delete">Supprimer la galerie</button>
 					</div>
 				</div>
 			</div>
@@ -66,8 +139,7 @@
 			<li><button class="filters-flats" id="2">Appartements</button></li>
 			<li><button class="filters-hotels" id="3">Hôtels & restaurants</button></li>
 		</ul>
-		<div class="gallery">
-		</div>
+		<div class="gallery"></div>
 	</section>
 	<section id="contact">
 		<h2>Contact</h2>
