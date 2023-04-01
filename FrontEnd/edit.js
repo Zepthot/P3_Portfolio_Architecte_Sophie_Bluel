@@ -195,9 +195,14 @@ function modalContentGallery(content, works) {
 // Add trash button on every works
 function trashButton(works, button) {
     const divGallery = document.querySelector(".gallery");
+    for(let i = 0; i < works.length; i++) {
+        console.log(works[i].id);
+        if(works[i].id == button.dataset.id) {
+            button.parentElement.remove();
+            divGallery.childNodes[i].remove();
+        }
+    }
     works.splice(button.dataset.id - 1, 1);
-    button.parentElement.remove();
-    divGallery.childNodes[button.dataset.id - 1].remove();
 }
 
 // Generate modal to adding work
