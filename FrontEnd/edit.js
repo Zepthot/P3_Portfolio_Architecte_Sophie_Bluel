@@ -13,24 +13,34 @@ if (token != null) {
 
 // Modal
 const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modalContent");
 const modalButton = document.getElementById("projectButton");
 const modalClose = document.getElementsByClassName("modal-close")[0];
+const modalAdd = document.getElementById("modalAdd");
 
 modalButton.onclick = function() {
-  	modal.style.display = "block";
+    modal.style.display = "block";
+    //Add function to generate modal with base modal-content
+    modalContent.innerHTML = "";
+    modalContentGallery(modalContent, works);
 }
 
-modalClose.onclick = function() {
-  	modal.style.display = "none";
-}
+// modalClose.onclick = function() {
+//     modal.style.display = "none";
+// }
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
 
-//Display of all works on modal
+// modalAdd.onclick = function() {
+//     modalContent.innerHTML = "";
+//     modalContentAdd(modalContent);
+// }
+
+// Display of all works on modal
 function createModalWorks(works) {
   for(let j = 0; j < works.length; j++) {
     const inside = works[j];
@@ -73,7 +83,7 @@ function createModalWorks(works) {
   }
 }
 
-createModalWorks(works)
+// createModalWorks(works)
 
 // let trashButton = document.querySelector(".modal-trash");
 // console.log(trashButton.dataset.id);
@@ -130,9 +140,81 @@ createModalWorks(works)
 //     }
 // }
 
+
+// Generate gallery modal
+function modalContentGallery(content, works) {
+    const spanClose = document.createElement("span");
+    spanClose.classList.add("modal-close");
+    spanClose.innerText = "×";
+
+    const title = document.createElement("h3");
+    title.classList.add("modal-title");
+    title.innerText = "Galerie photo";
+
+    const gallery = document.createElement("div");
+    gallery.classList.add("modal-gallery");
+    
+    const rule = document.createElement("hr");
+    rule.classList.add("modal-line");
+
+    const addButton = document.createElement("button");
+    addButton.classList.add("modal-add");
+    addButton.innerText = "Ajouter une photo";
+
+    const breakLine = document.createElement("br");
+    
+    const delButton = document.createElement("button");
+    delButton.classList.add("modal-delete");
+    delButton.innerText = "Supprimer la galerie";
+
+    content.appendChild(spanClose);
+    content.appendChild(title);
+    content.appendChild(gallery);
+    createModalWorks(works);
+    content.appendChild(rule);
+    content.appendChild(addButton);
+    content.appendChild(breakLine);
+    content.appendChild(delButton);
+
+    addButton.onclick = function() {
+        modalContent.innerHTML = "";
+        modalContentAdd(modalContent);
+    }
+
+    spanClose.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+// Add trash button on every works
 function trashButton(works, button) {
     const divGallery = document.querySelector(".gallery");
     works.splice(button.dataset.id - 1, 1);
     button.parentElement.remove();
     divGallery.childNodes[button.dataset.id - 1].remove();
+}
+
+// Generate modal to adding work
+function modalContentAdd(content) {
+    const spanClose = document.createElement("span");
+    spanClose.classList.add("modal-close");
+    spanClose.innerText = "×";
+
+    const backArrow = document.createElement("i");
+    backArrow.classList.add("modal-arrow");
+    backArrow.classList.add("fa-solid", "fa-arrow-left");
+
+    content.appendChild(spanClose);
+    content.appendChild(backArrow);
+
+    const modalClose = document.getElementsByClassName("modal-close")[0];
+    modalClose.onclick = function() {
+        modal.style.display = "none";
+    }
 }

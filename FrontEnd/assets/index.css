@@ -136,12 +136,23 @@
 
 .modal-close {
 	float: right;
-	font-size: 24px;
+	font-size: 21px;
 	font-weight: bold;
 }
   
 .modal-close:hover,
 .modal-close:focus {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-arrow {
+	float: left;
+	font-size: 21px;
+}
+
+.modal-arrow:hover,
+.modal-arrow:focus {
 	text-decoration: none;
 	cursor: pointer;
 }
