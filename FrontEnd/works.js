@@ -1,7 +1,13 @@
-const reponse = await fetch("http://localhost:5678/api/works");
-let works = await reponse.json();
+let works = window.localStorage.getItem("works");
 
-function createWorks(works) {
+if (works == null) {
+    const reponse = await fetch("http://localhost:5678/api/works");
+    works = await reponse.json();
+} else {
+    window.localStorage.setItem("works", works);
+}
+
+export function createWorks(works) {
     for (let i = 0; i < works.length; i++) {
         const inside = works[i];
         const divGallery = document.querySelector(".gallery");

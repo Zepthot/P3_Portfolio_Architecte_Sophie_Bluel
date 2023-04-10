@@ -73,6 +73,16 @@
 	font-size: 14px;
 }
 
+.valid-button:hover {
+	cursor: pointer;
+}
+
+.notif-error {
+	color: red;
+	display: none;
+	font-size: 12px;
+}
+
 #introduction figure button {
 	display: none;
 	margin: 15px 0px 0px 50px;
@@ -88,6 +98,12 @@
 	flex-direction: row;
 	justify-content: center;
 	gap: 31px;
+}
+
+figcaption {
+	float: left;
+	color: #3D3D3D;
+	font-size: 13px;
 }
 
 .div-button-modal{
@@ -149,12 +165,15 @@
 .modal-arrow {
 	float: left;
 	font-size: 21px;
+	border: none;
+	background-color: white;
 }
 
 .modal-arrow:hover,
 .modal-arrow:focus {
 	text-decoration: none;
 	cursor: pointer;
+	background-color: white;
 }
 
 .modal-title {
@@ -268,4 +287,85 @@
 .modal-delete:hover {
 	background-color: white;
 	cursor: pointer;
+}
+
+.modal-add-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #E8F1F7;
+	border-radius: 3px;
+	height: 169px;
+	width: 420px;
+	margin: 20px auto;
+}
+
+.modal-add-icon {
+	color: #B9C5CC;
+	margin-top: 28px;
+	margin-bottom: 21px;
+	height: 46px;
+	width: 58px;
+}
+
+.modal-add-button {
+	padding: 10px 33px;
+	border-radius: 50px;
+	border: none;
+	background-color: #CBD6DC;
+	font-weight: 500;
+	font-size: 14px;
+	color: #306685;
+}
+
+.modal-add-button:hover {
+	cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.modal-add-infos {
+	margin-top: 7px;
+	margin-bottom: 19px;
+	font-size: 10px;
+	color: #444444;
+}
+
+.modal-field-div {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	max-width: 420px;
+}
+
+.modal-add-label {
+	color: #3D3D3D;
+	display: flex;
+	align-items: flex-start;
+	margin: 21px 0px 10px 0px;
+}
+
+.modal-add-field {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	height: 51px;
+}
+
+.modal-add-confirm-button {
+	margin: 17px 0px 25px 0px;
+	padding: 10px 49px;
+	background-color: #A7A7A7;
+	border-radius: 60px;
+	border: none;
+	color: white;
+	font-family: "Syne";
+	font-weight: 700;
+	width: 236px;
+	cursor: not-allowed;
+}
+
+.modal-picture-preview {
+	height: inherit;
 }
