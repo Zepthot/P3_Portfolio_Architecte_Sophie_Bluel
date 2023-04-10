@@ -243,7 +243,6 @@ function modalContentAdd(content, works) {
     confirmButton.setAttribute("type", "button");
     confirmButton.innerText = "Valider";
     confirmButton.disabled = true;
-    // confirmButton.addEventListener("click", function(){postWork(inputAdd.files[0], fieldTitle.value, fieldCategory)});
     confirmButton.addEventListener("click", function(){addConfirmation(inputAdd.files[0], fieldTitle.value, fieldCategory)});
 
     content.appendChild(spanClose);
