@@ -1,12 +1,7 @@
 import { createWorks } from "./works.js";
 
-// Check if works is in local else fetch
-let works = window.localStorage.getItem("works");
-if (works == null) {
-    const reponse = await fetch("http://localhost:5678/api/works");
-    works = await reponse.json();
-    window.localStorage.setItem("works", works);
-}
+const reponse = await fetch("http://localhost:5678/api/works");
+let works = await reponse.json();
 
 const categ = await fetch("http://localhost:5678/api/categories");
 let categories = await categ.json();

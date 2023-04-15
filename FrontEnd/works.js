@@ -1,10 +1,6 @@
-let works = window.localStorage.getItem("works");
+const reponse = await fetch("http://localhost:5678/api/works");
+let works = await reponse.json();
 
-if (works == null) {
-    const reponse = await fetch("http://localhost:5678/api/works");
-    works = await reponse.json();
-    window.localStorage.setItem("works", works);
-}
 
 export function createWorks(works) {
     for (let i = 0; i < works.length; i++) {
