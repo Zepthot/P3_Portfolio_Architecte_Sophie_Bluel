@@ -1,6 +1,8 @@
 const reponse = await fetch("http://localhost:5678/api/works");
 let works = await reponse.json();
 
+const categ = await fetch("http://localhost:5678/api/categories");
+let categories = await categ.json();
 
 export function createWorks(works) {
     for (let i = 0; i < works.length; i++) {
@@ -25,27 +27,36 @@ export function createWorks(works) {
 createWorks(works)
 
 // Filters
-const filterAll = document.querySelector(".filters-all");
+const filters = document.querySelector(".filters");
+
+const filterAll = document.querySelector(".filters-button");
 filterAll.addEventListener("click", function(){filterWorks(filterAll, works)});
 
-const filterObjects = document.querySelector(".filters-objects");
-filterObjects.addEventListener("click", function(){filterWorks(filterObjects, works)});
+for(let i = 0; i < categories.length; i++) {
+    const liFil = document.createElement("li");
+    const buFil = document.createElement("button");
+    buFil.classList.add("filters-button");
+    buFil.dataset.id = categories[i].id;
+    buFil.innerText = categories[i].name;
+    buFil.addEventListener("click", function(){filterWorks(buFil, works)});
 
-const filterFlats = document.querySelector(".filters-flats");
-filterFlats.addEventListener("click", function(){filterWorks(filterFlats, works)});
-
-const filterHotels = document.querySelector(".filters-hotels");
-filterHotels.addEventListener("click", function(){filterWorks(filterHotels, works)});
+    filters.appendChild(liFil);
+    liFil.appendChild(buFil);
+}
 
 function filterWorks(filter, work) {
+    const remfil = document.getElementsByClassName("active");
+    remfil[0].classList.remove("active");
+    filter.classList.add("active");
+
     let filters = 0;
-    if (filter.id == 0) {
+    if (filter.dataset.id == 0) {
         filters = work.filter(function(work) {
             return work.categoryId != 0;
         });
     } else {
         filters = work.filter(function(work) {
-            return work.categoryId == filter.id;
+            return work.categoryId == filter.dataset.id;
         });
     }
     document.querySelector(".gallery").innerHTML = "";

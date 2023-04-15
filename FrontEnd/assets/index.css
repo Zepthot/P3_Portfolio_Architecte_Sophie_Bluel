@@ -10,6 +10,15 @@
     height: 20px;
 }
 
+.login-button {
+	border: none;
+	background-color: white;
+	font-family: "Work Sans";
+	font-weight: 400;
+	font-size: 16px;
+	cursor: pointer;
+}
+
 .filters {
 	display: flex;
 	flex-direction: row;
@@ -18,10 +27,7 @@
 	gap: 10px;
 }
 
-.filters-all, 
-.filters-objects, 
-.filters-flats, 
-.filters-hotels {
+.filters-button {
 	padding: 9px;
 	min-width: 100px;
 	font-family: 'Syne';
@@ -33,13 +39,15 @@
 	border-radius: 60px;
 }
 
-.filters-all:hover, 
-.filters-objects:hover, 
-.filters-flats:hover, 
-.filters-hotels:hover  {
+.filters-button:hover  {
 	background-color: #1D6154;
 	color: white;
 	cursor: pointer;
+}
+
+.active {
+	background-color: #1D6154;
+	color: white;
 }
 
 .on-header-visible {

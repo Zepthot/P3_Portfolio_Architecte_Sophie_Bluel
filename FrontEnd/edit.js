@@ -15,13 +15,28 @@ let toAddWorks = [];
 
 // Display edit buttons
 if (token != null) {
+    const log = document.querySelector(".login-button");
+    log.dataset.id = 1;
+    log.innerText = "logout";
+    log.addEventListener("click", function(){logout(log)});
+
     document.getElementById("onHeader").style.display = "block";
     document.getElementById("pictureButton").style.display = "block";
     document.getElementById("introButton").style.display = "block";
     document.getElementById("projectButton").style.display = "block";
 
+    document.querySelector(".filters").style.display = "none";
+
     const publishButton = document.getElementById("validButton");
     publishButton.addEventListener("click", function(){publishWorks()});
+}
+
+//Log function
+function logout(button) {
+    if(button.dataset.id == 1) {
+        window.localStorage.removeItem("token");
+        location.reload();
+    }
 }
 
 // Modal
