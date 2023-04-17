@@ -28,7 +28,7 @@ if (token != null) {
     document.querySelector(".filters").style.display = "none";
 
     const publishButton = document.getElementById("validButton");
-    publishButton.addEventListener("click", function(){publishWorks()});
+    // publishButton.addEventListener("click", function(){publishWorks()});
 }
 
 //Log function
