@@ -150,10 +150,11 @@ async function trashButton(works, button) {
         if(works[i].id == button.dataset.id) {
             button.parentElement.remove();
             divGallery.childNodes[i].remove();
+            deleteWork(works[i].id);
         }
     }
     works.splice(button.dataset.id - 1, 1);
-    toDeleteWorks.push(button.dataset.id);
+    // toDeleteWorks.push(button.dataset.id);
 }
 
 // Delete function
@@ -379,7 +380,8 @@ function addConfirmation(image, title, category) {
     };
 
     works.push(newWork);
-    toAddWorks.push(newWork);
+    // toAddWorks.push(newWork);
+    postWork(image, title, idCategory);
     const divGallery = document.querySelector(".gallery");
     divGallery.innerHTML = "";
     createWorks(works);
